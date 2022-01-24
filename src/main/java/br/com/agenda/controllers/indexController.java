@@ -16,8 +16,5 @@ public class indexController {
 		return mv;
 	}
 	
-	/*@GetMapping("/")
-	public String idex() {
-		return "/home/index";
-	}*/
+
 }
