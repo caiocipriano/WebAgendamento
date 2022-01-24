@@ -1,0 +1,22 @@
+@charset "ISO-8859-1";
+*{margin:0;
+  padding:0;
+  box-sizing:border-box;	
+  }
+  
+  nav{height:101px;
+ 	color:#FFF;
+ 	text-transform:uppercase;
+ 	}
+ 	
+ a{cursor:pointer;
+ 	font-weight:bolt;
+ 	}
+ 	
+ .rodape{
+	color:#ffff;
+	background-color:#FFF0F5;
+	text-align:center;
+	font-size:1.25em;
+	padding:15px;
+}
