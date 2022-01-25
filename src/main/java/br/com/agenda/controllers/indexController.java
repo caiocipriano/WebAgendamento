@@ -13,6 +13,7 @@ public class indexController {
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("/home/index");
+		mv.addObject("login",new Login());
 		return mv;
 	}
 	

@@ -7,8 +7,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import br.com.agenda.enums.Servico;
 
@@ -21,6 +21,8 @@ public class Agenda {
 	private Integer id;
 	
 	@Column(name = "Nome")
+	@Size(min=5, max =100)
+	@NotNull(message="Este campo não pode ser vazio")
 	private String nome;
 	 
 	@Column(name = "Data")
@@ -30,7 +32,48 @@ public class Agenda {
 	private String hora;
 	
     @Enumerated(EnumType.STRING)
-	//@NotNull(message = "Campo Obrigatório")
-	private Servico servico; 
+	@NotNull(message = "Campo Obrigatório")
+	private Servico servico;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getData() {
+		return data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+	}
+
+	public String getHora() {
+		return hora;
+	}
+
+	public void setHora(String hora) {
+		this.hora = hora;
+	}
+
+	public Servico getServico() {
+		return servico;
+	}
+
+	public void setServico(Servico servico) {
+		this.servico = servico;
+	} 
 	
+    
 }

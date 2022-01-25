@@ -2,9 +2,9 @@ package br.com.agenda.enums;
 
 public enum Servico {
 	
-	DESIGN("Design Sobramcelhas"),
+	Design("Design Sobramcelhas"),
 	
-	MICRO("MicroPigmentação");
+	MicroPigmentação("MicroPigmentação");
 	
 	private String servico;
 	
