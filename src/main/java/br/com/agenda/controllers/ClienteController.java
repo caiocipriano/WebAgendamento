@@ -24,7 +24,7 @@ public class ClienteController {
 	@PostMapping("/agendar")
 	public ModelAndView agendamento(@Valid Agenda agenda) {
 		ModelAndView mv = new ModelAndView();
-		
+		mv.addObject("agenda", new Agenda());
 		return mv;
 	}
 	
