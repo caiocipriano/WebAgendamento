@@ -21,7 +21,7 @@ public class Agenda {
 	private Integer id;
 	
 	@Column(name = "Nome")
-	@Size(min=5, max =100)
+	@Size(min=2, max =100)
 	@NotNull(message="Este campo não pode ser vazio")
 	private String nome;
 	 

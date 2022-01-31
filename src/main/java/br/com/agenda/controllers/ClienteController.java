@@ -2,16 +2,21 @@ package br.com.agenda.controllers;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.agenda.models.Agenda;
+import br.com.agenda.repository.AgendaDAO;
 
 @Controller
 public class ClienteController {
-	
+		
+	@Autowired
+	private AgendaDAO agendaRepository;
 		
 	@GetMapping("/agendamento")
 	public ModelAndView agendar() {
@@ -22,9 +27,16 @@ public class ClienteController {
 	}
 	
 	@PostMapping("/agendar")
-	public ModelAndView agendamento(@Valid Agenda agenda) {
+	public ModelAndView agendamento(@Valid Agenda agenda, BindingResult br) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("agenda", new Agenda());
+		if(br.hasErrors()) {
+			mv.setViewName("Cliente/agendamento");
+			mv.addObject(agenda);
+		}else{
+			mv.setViewName("/home/index");
+			agendaRepository.save(agenda);
+		}
+		
 		return mv;
 	}
 	

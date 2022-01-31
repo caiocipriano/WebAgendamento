@@ -32,7 +32,6 @@
 			<!-- Serviço -->
 			<div class = "row">
 				<div class="col-md-6 form-group offset-md-3">
-				
 					<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('servico')}">	
 						<label class="validation-message" th:errors="*{servico}"></label>
 					</div>
@@ -51,8 +50,8 @@
 						<label class="validation-message" th:errors="*{data}"></label>
 				</div>
 				
-				<label>Data:</label><small class="text-muted"> Ex:1400</small>
-				<input class="form-control" th:field="*{data}">
+				<label>Data:</label>
+				<input type="date" value="" name="data"/>	
 				</div>
 				
 			</div>
@@ -64,9 +63,8 @@
 						<label class="validation-message" th:errors="*{hora}"></label>
 				</div>
 				
-				<label>Hora:</label> <small class="text-muted"> Ex:0102</small>
-				
-				<input class="form-control" th:field="*{data}">
+				<label>Hora:</label>
+				<input class="form-control" placeholder="Ex:" th:field="*{hora}">	
 				</div>
 				
 			</div>
