@@ -34,7 +34,10 @@
 				<td th:text ="${agenda.hora}"></td>		
 
 				
+				<td>
+					<a class ="btn btn-danger" style="width:150px" th:href="@{excluir/{id}(id=${agenda.id})}"><i class="fas fa-times"></i> Excluir</a>
 				
+				</td>
 				
 			</tr>
 		
