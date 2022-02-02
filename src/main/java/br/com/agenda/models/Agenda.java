@@ -7,6 +7,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -21,8 +22,6 @@ public class Agenda {
 	private Integer id;
 	
 	@Column(name = "Nome")
-	@Size(min=2, max =100)
-	@NotNull(message="Este campo não pode ser vazio")
 	private String nome;
 	 
 	@Column(name = "Data")

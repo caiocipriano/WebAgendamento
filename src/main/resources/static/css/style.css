@@ -74,6 +74,12 @@ a.btn-nav:hover{
 	font-weight:bold;
 }
 
+
+.appt{
+	display: inline;
+	margin-right: 30px;
+}
+
 .btn{
 	width:280px;
 	color:white;
