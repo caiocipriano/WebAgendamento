@@ -40,4 +40,13 @@ public class ClienteController {
 		return mv;
 	}
 	
+	@GetMapping("/listAgenda")
+	public ModelAndView listAgenda() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("/cliente/listAgenda");
+		mv.addObject("listAgenda", agendaRepository.findAll());
+		return mv;
+	}
+	
+	
 }
