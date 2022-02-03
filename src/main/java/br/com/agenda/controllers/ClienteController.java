@@ -52,7 +52,7 @@ public class ClienteController {
 	@GetMapping("/excluir/{id}")
 	public String excluir(@PathVariable("id") Integer id) {
 		agendaRepository.deleteById(id);
-		return"redirect:/cliente/listAgenda";
+		return"redirect:/listAgenda";
 	}
 	
 	

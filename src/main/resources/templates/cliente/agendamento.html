@@ -24,7 +24,8 @@
 				</div>
 				
 				<label>Nome:</label>
-				<input class="form-control" placeholder="Ex: Nicolle" th:field="*{nome}">
+				<input class="form-control" placeholder="Ex: Nicolle" th:field="*{nome}">			&nbsp;
+				
 				</div>
 				
 			</div>
@@ -35,7 +36,9 @@
 					<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('servico')}">	
 						<label class="validation-message" th:errors="*{servico}"></label>
 					</div>
-				
+					
+					
+					
 					<label>Serviço:</label>
 					<select class="form-control" th:field="*{Servico}">
 						<option th:each="Servico : ${T(br.com.agenda.enums.Servico).values()}" th:value="${Servico} " th:text="${Servico}"></option>
@@ -43,7 +46,7 @@
 				</div>
 		  </div>
 		  
-		  	<!-- Data -->
+			<!-- Data -->
 			<div class="row">
 				<div class="col-md-2 form group offset-md-3">
 					<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('data')}">
@@ -55,7 +58,7 @@
 				</div>
 				
 			</div>
-				
+			&nbsp;
 			<!-- Hora -->
 			<div class="row">
 				<div class="col-md-2 form group offset-md-3">
@@ -63,13 +66,14 @@
 						<label class="validation-message" th:errors="*{hora}"></label>
 				</div>
 				
-				<label>Hora:</label>
+				<label>Hora:
 				<input type="time" name="hora" min="09:00" max="18:00" required/>
+				
+				</label>
 				<!--<input class="form-control" placeholder="Ex:" th:field="*{hora}">	-->
 				</div>
 				
 			</div>
-		
 		
 			<div class="row">
 				<button type="submit" class="btn btn-success offset-md-3">Agendar</button>
