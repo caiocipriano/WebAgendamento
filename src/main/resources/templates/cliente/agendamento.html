@@ -24,7 +24,7 @@
 				</div>
 				
 				<label>Nome:</label>
-				<input class="form-control" placeholder="Ex: Nicolle" th:field="*{nome}">			&nbsp;
+				<input class="form-control" placeholder="Ex: Nicolle" th:field="*{nome}">			
 				
 				</div>
 				
@@ -36,8 +36,6 @@
 					<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('servico')}">	
 						<label class="validation-message" th:errors="*{servico}"></label>
 					</div>
-					
-					
 					
 					<label>Serviço:</label>
 					<select class="form-control" th:field="*{Servico}">
@@ -58,7 +56,6 @@
 				</div>
 				
 			</div>
-			&nbsp;
 			<!-- Hora -->
 			<div class="row">
 				<div class="col-md-2 form group offset-md-3">
@@ -66,10 +63,8 @@
 						<label class="validation-message" th:errors="*{hora}"></label>
 				</div>
 				
-				<label>Hora:
-				<input type="time" name="hora" min="09:00" max="18:00" required/>
-				
-				</label>
+				<label>Hora:</label>
+				<input type="time" name="hora" min="09:00" max="18:00" />
 				<!--<input class="form-control" placeholder="Ex:" th:field="*{hora}">	-->
 				</div>
 				
