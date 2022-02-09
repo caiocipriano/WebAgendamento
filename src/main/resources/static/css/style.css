@@ -1,5 +1,16 @@
 @charset "UTF-8";
 
+.circular{
+	display:inline-block;
+	position:relative;
+	width: 200px;
+	height: 200px; 
+	overflow: hidden; 
+	border-radius: 50%;
+}
+
+
+
 #color{
 	color:white;
 
@@ -12,7 +23,7 @@
   box-sizing:border-box;	
   }
   
- nav{height:100px;
+ nav{height:250px;
  	color:#FFF;
  	text-transform:uppercase;
  	}
