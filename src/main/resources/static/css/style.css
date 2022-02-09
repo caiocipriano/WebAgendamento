@@ -1,13 +1,19 @@
 @charset "UTF-8";
 
-.circular{
-	display:inline-block;
+
+.logo-nav{
+	max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+    display:inline-block;
 	position:relative;
 	width: 200px;
 	height: 200px; 
 	overflow: hidden; 
-	border-radius: 50%;
+	border-radius: 100%;
 }
+
 
 
 
