@@ -12,8 +12,7 @@ public class indexController {
 	@GetMapping("/")
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("/home/index");
-		mv.addObject("login",new Login());
+		mv.setViewName("home/index");
 		return mv;
 	}
 	
