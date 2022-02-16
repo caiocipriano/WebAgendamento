@@ -43,6 +43,13 @@ public class ClienteController {
 		return mv;
 	}
 	
+	@GetMapping("/galeria")
+	public ModelAndView galeria() {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("/cliente/galeria");
+		return mv;
+	}
+	
 	@GetMapping("/listAgenda")
 	public ModelAndView listAgenda() {
 		ModelAndView mv = new ModelAndView();
